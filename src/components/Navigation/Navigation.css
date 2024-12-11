@@ -1,0 +1,65 @@
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.logo-container h1 {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.nav-links a.active {
+    background-color: #0056b3;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Напівпрозорий білий */
+    transform: scale(1.05);
+}

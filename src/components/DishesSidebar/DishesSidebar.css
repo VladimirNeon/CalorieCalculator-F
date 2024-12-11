@@ -1,0 +1,32 @@
+.sidebar {
+    width: 250px;
+    padding: 100px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #333;
+}
+
+.sidebar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar th,
+.sidebar td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.sidebar th {
+    background-color: #f2f2f2;
+}
