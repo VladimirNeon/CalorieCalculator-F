@@ -44,3 +44,18 @@
     margin-top: 15px;
     color: green;
 }
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
