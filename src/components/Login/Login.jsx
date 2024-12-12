@@ -59,6 +59,9 @@ const LoginPage = () => {
                 <button type="submit">Увійти</button>
             </form>
             {message && <p className="message">{message}</p>}
+            <h3 className="register-link">
+                Ще не маєте облікового запису? <a href="/register">Зареєструватися</a>
+            </h3>
         </div>
     );
 };
