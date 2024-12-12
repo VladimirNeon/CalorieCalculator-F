@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Додаємо useNavigate для навігації
 import "./Registration.css";
 
 const RegistrationPage = () => {
     const [formData, setFormData] = useState({ username: "", password: "" });
     const [message, setMessage] = useState("");
+    const navigate = useNavigate(); // Ініціалізуємо useNavigate
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -13,7 +15,7 @@ const RegistrationPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://caloriecalculator-b-production.up.railway.app/api/auth/register", {
+            const response = await fetch("http://localhost:8080/api/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -24,6 +26,7 @@ const RegistrationPage = () => {
             if (response.ok) {
                 setMessage("Реєстрація успішна!");
                 setFormData({ username: "", password: "" });
+                setTimeout(() => navigate("/login"), 1500); // Переадресація після 1.5 секунд
             } else {
                 setMessage("Помилка реєстрації. Спробуйте ще раз.");
             }
@@ -55,6 +58,9 @@ const RegistrationPage = () => {
                 <button type="submit">Зареєструватися</button>
             </form>
             {message && <p className="message">{message}</p>}
+            <h3 className="login-link">
+                Вже маєте обліковий запис? <a href="/login">Увійти</a>
+            </h3>
         </div>
     );
 };
